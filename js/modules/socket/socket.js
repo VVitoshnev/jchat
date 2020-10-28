@@ -1,9 +1,11 @@
+const SERVER_PATH = 'http://35.157.80.184:8080';
+
 export const Socket = (function () {
   let connectInstance;
 
   const connect = () => {
     // eslint-disable-next-line no-undef
-    connectInstance = io.connect('http://35.157.80.184:8080');
+    connectInstance = io.connect(SERVER_PATH);
   };
 
   const noInstanceError = () => {
