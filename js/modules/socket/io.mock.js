@@ -1,28 +1,26 @@
 let EVENTS = {};
 
 function emit(event, ...args) {
-    EVENTS[event].forEach(func => func(...args));
+  EVENTS[event].forEach((func) => func(...args));
 }
 
 export const clientSocket = {
-    on(event, func) {
-        if (EVENTS[event]) {
-            return EVENTS[event].push(func);
-        }
-
-        EVENTS[event] = [func];
-    },
-    emit
+  on(event, func) {
+    if (EVENTS[event]) {
+      EVENTS[event].push(func);
+    } else {
+      EVENTS[event] = [func];
+    }
+  },
+  emit,
 };
 
 export const io = {
-    connect: () => {
-        return clientSocket;
-    }
+  connect: () => clientSocket,
 };
 
 export const serverSocket = { emit };
 
 export function cleanEvents() {
-    EVENTS = {};
+  EVENTS = {};
 }
