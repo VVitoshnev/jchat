@@ -1,0 +1,159 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.body {
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.connectStatus {
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+}
+
+
+.connectStatus_icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    box-shadow: 0 0 5px -2px #000;
+    margin-right: 5px;
+}
+
+.connectStatus_connected {
+    background-color: #00ff4c;
+}
+
+.connectStatus_disconnected {
+    background-color: #ff0000;
+}
+
+.connectStatus_connecting {
+    background-color: #ffd100;
+}
+
+.connectStatus_text {
+    font-weight: bold;
+}
+
+.statusBar {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chat {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    border: 1px solid #222222;
+    margin: 10px auto;
+    box-shadow: 0 0 11px -4px rgba(0,0,0,0.5);
+}
+
+.chat_messages {
+    flex-grow: 1;
+    padding: 4px 4px 8px 4px;
+    overflow-y: auto;
+}
+
+.chat_status {
+    text-align: center;
+    padding: 4px;
+    color: #616161;
+}
+
+.chat_form {
+    height: 40px;
+    background: #f5f5f5;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.form {
+    display: flex;
+    height: 100%;
+}
+
+.form_input {
+    margin: 4px;
+}
+
+.form_input-message {
+    flex-grow: 1
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2px 6px;
+    height: 100%;
+    max-height: 32px;
+    border: 1px solid #313131;
+}
+
+.input_error {
+    border-color: #920000;
+}
+
+.button {
+    height: 100%;
+    max-height: 32px;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.message-income {
+    justify-content: flex-start;
+}
+
+.message-outcome {
+    justify-content: flex-end;
+}
+
+.message_name {
+    margin-right: 20px;
+}
+
+.message_pending .message_text {
+    color: #909090;
+}
+
+.message_failed::after {
+    width: 9px;
+    height: 9px;
+    background: #ff9292;
+    border-radius: 10px;
+    margin-left: 4px;
+    content: "";
+}
